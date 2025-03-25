@@ -94,7 +94,7 @@
         
         /* 主要内容 */
         .main {
-            max-width: 1200px;
+            max-width: 1500px;
             margin: 40px auto;
             padding: 0 20px;
         }
@@ -116,6 +116,25 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
+            background: var(--gold);
+        }
+
+        .container-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 30px 0;
+            /* text-align: center; */
+            color: var(--black);
+            position: relative;
+        }
+
+        .container-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
             background: var(--gold);
         }
         
@@ -505,9 +524,220 @@
             font-size: 10px;
             color: var(--gold);
         }
-        
-        /* 由于篇幅限制，这里只展示了6种完整风格卡片样式 */
-        /* 实际实现中应包含所有29种风格的完整CSS */
+        /* 7. 日式极简风格 */
+        .japanese-minimalism {
+            background-color: var(--white);
+            color: var(--black);
+            border: 1px solid #e0e0e0;
+        }
+        .japanese-minimalism .card-date {
+            writing-mode: vertical-rl;
+            position: absolute;
+            right: 10px;
+            top: 30px;
+            color: #666;
+        }
+        .japanese-minimalism .card-title {
+            font-size: 28px;
+            font-weight: 400;
+            text-align: left;
+            margin-left: 10px;
+        }
+        .japanese-minimalism .card-quote {
+            font-size: 16px;
+            color: #555;
+            border-left: 1px solid #ccc;
+            padding-left: 15px;
+            margin-left: 20px;
+        }
+        .japanese-minimalism .card-points li:before {
+            content: "一";
+            color: #999;
+            position: absolute;
+            left: 0;
+        }
+        .japanese-minimalism .card-note {
+            border-top: 1px solid #ddd;
+            color: #777;
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        /* 8. 后现代解构风格 */
+        .postmodern-deconstruction {
+            background-color: #fff;
+            color: #333;
+            border: 2px dashed #ff1493;
+            transform: rotate(-2deg);
+        }
+        .postmodern-deconstruction .card-date {
+            font-size: 14px;
+            transform: rotate(10deg);
+            color: #ff1493;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+        .postmodern-deconstruction .card-title {
+            font-size: 30px;
+            font-weight: 700;
+            transform: rotate(-5deg);
+            color: #00ced1;
+            text-align: center;
+        }
+        .postmodern-deconstruction .card-quote {
+            font-size: 18px;
+            transform: skew(-10deg);
+            background: rgba(255, 20, 147, 0.1);
+            padding: 10px;
+        }
+        .postmodern-deconstruction .card-points li {
+            transform: rotate(3deg);
+        }
+        .postmodern-deconstruction .card-points li:before {
+            content: "X";
+            color: #ff1493;
+        }
+        .postmodern-deconstruction .card-note {
+            border: 1px solid #00ced1;
+            transform: rotate(5deg);
+            color: #666;
+        }
+
+        /* 9. 朋克风格 */
+        .punk {
+            background-color: #111;
+            color: #fff;
+            border: 3px solid #ff0000;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAB5JREFUCB1jZGBg+M+A4f8MGBgY/jNg+P8fBoeHhw+2AQGL9qpiAAAAAElFTkSuQmCC');
+        }
+        .punk .card-date {
+            font-family: 'Courier New', monospace;
+            color: #ff0000;
+            text-transform: uppercase;
+        }
+        .punk .card-title {
+            font-size: 28px;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            background: #ff0000;
+            padding: 5px;
+        }
+        .punk .card-quote {
+            border: 2px dashed #fff;
+            padding: 10px;
+            color: #ccc;
+        }
+        .punk .card-points li:before {
+            content: "!";
+            color: #ff0000;
+        }
+        .punk .card-note {
+            background: rgba(255, 0, 0, 0.2);
+            color: #fff;
+            border: 1px solid #ff0000;
+        }
+
+        /* 10. 英伦摇滚风格 */
+        .british-rock {
+            background-color: #f0ebeb;
+            color: #333;
+            border: 2px solid #1e90ff;
+            background-image: linear-gradient(45deg, rgba(30, 144, 255, 0.1) 25%, transparent 25%);
+        }
+        .british-rock .card-date {
+            color: #1e90ff;
+            border-bottom: 1px solid #ff0000;
+            padding-bottom: 5px;
+        }
+        .british-rock .card-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 26px;
+            color: #333;
+            text-align: center;
+        }
+        .british-rock .card-quote {
+            color: #666;
+            padding: 10px;
+            background: rgba(255, 0, 0, 0.1);
+        }
+        .british-rock .card-points li:before {
+            content: "♪";
+            color: #1e90ff;
+        }
+        .british-rock .card-note {
+            border: 1px dashed #1e90ff;
+            color: #555;
+        }
+
+        /* 11. 黑金属风格 */
+        .black-metal {
+            background-color: #000;
+            color: #fff;
+            border: 2px solid #666;
+            font-family: 'Courier New', monospace;
+        }
+        .black-metal .card-date {
+            color: #999;
+            text-align: center;
+            border-bottom: 1px dashed #666;
+        }
+        .black-metal .card-title {
+            font-size: 28px;
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+        }
+        .black-metal .card-quote {
+            border: 1px solid #666;
+            padding: 10px;
+            color: #ccc;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .black-metal .card-points li:before {
+            content: "†";
+            color: #999;
+        }
+        .black-metal .card-note {
+            border: 1px dashed #666;
+            color: #999;
+        }
+
+        /* 12. 孟菲斯风格 */
+        .memphis-design {
+            background-color: #fff;
+            color: #333;
+            border: 3px solid #00ff00;
+            background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="5" cy="5" r="2" fill="%2300ff00"/%3Crect x="10" y="10" width="5" height="5" fill="%23ff00ff"/%3C/svg%3E');
+        }
+        .memphis-design .card-date {
+            font-size: 14px;
+            color: #ff00ff;
+            transform: rotate(-10deg);
+        }
+        .memphis-design .card-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #00ff00;
+            text-align: center;
+        }
+        .memphis-design .card-quote {
+            background: rgba(255, 0, 255, 0.2);
+            padding: 10px;
+            transform: skew(10deg);
+            color: #333;
+        }
+        .memphis-design .card-points li:before {
+            content: "●";
+            color: #ff00ff;
+        }
+        .memphis-design .card-note {
+            border: 2px solid #ff00ff;
+            color: #666;
+            transform: rotate(5deg);
+        }
         
         /* 响应式设计 */
         @media (max-width: 500px) {
@@ -609,6 +839,16 @@
             font-size: 12px;
             color: rgba(245, 245, 220, 0.7);
         }
+
+        .copyright a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .copyright a:hover {
+            transform: translateY(-3px);
+            color: var(--cream);
+        }
         
         /* 响应式设计 */
         @media (max-width: 768px) {
@@ -640,12 +880,11 @@
   <!-- 导航栏 -->
   <header class="header">
       <div class="header-content">
-          <div class="logo">STYLE GALLERY</div>
+          <div class="logo">KNOWLEDGE CARD</div>
           <nav class="nav">
-              <a href="#">首页</a>
-              <a href="#">风格</a>
-              <a href="#">关于</a>
-              <a href="#">联系</a>
+              <a href="/">Home</a>
+              <a href="https://notes-wudi.pages.dev/about/" target='_blank'>About</a>
+              <a href="mailto:wuchendi96@gmail.com" target='_blank'>Contact</a>
           </nav>
       </div>
   </header>
@@ -654,6 +893,7 @@
   <main class="main">
     <h1 class="gallery-title">29种数字杂志风格画廊</h1>
     
+    <h1 class="container-title">DeepSeek</h1>
     <div class="styles-container">
         <!-- 1. 极简主义风格 -->
         <div class="style-card minimalist">
@@ -803,8 +1043,129 @@
                 </div>
             </div>
         </div>
-        
-        <!-- 由于篇幅限制，这里只展示了6种风格卡片 -->
+      </div>
+
+      <h1 class="container-title">Grok 3</h1>
+      <div class="styles-container">
+        <!-- 7. 日式极简风格 -->
+        <div class="style-card japanese-minimalism">
+            <div class="card-date">2025年3月25日</div>
+            <h2 class="card-title">技术时代的生存智慧</h2>
+            <div class="card-quote">技术能让你吃上饭，但救不了你一辈子。</div>
+            <ul class="card-points">
+                <li>编程技能只是时代红利</li>
+                <li>无人不可替代</li>
+                <li>“技术至上”是陷阱</li>
+                <li>提升自己更重要</li>
+                <li>多元化是应对之道</li>
+            </ul>
+            <div class="card-footer">
+                <div class="card-note">技术是工具，而非全部。</div>
+                <div class="card-qr">
+                    <img src="https://cdn.jsdelivr.net/gh/cdLab996/picture-lib/wudi/qrcode/bitly-wudi.png" width="80" height="80" alt="QR Code">
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. 后现代解构风格 -->
+        <div class="style-card postmodern-deconstruction">
+            <div class="card-date">March 2025</div>
+            <h2 class="card-title">技术时代生存</h2>
+            <div class="card-quote">时代一翻脸，技术资本如沙流走。</div>
+            <ul class="card-points">
+                <li>编程技能只是红利</li>
+                <li>无人不可替代</li>
+                <li>技术至上是陷阱</li>
+                <li>提升自己更重要</li>
+                <li>多元化应对变化</li>
+            </ul>
+            <div class="card-footer">
+                <div class="card-note">思维转变是关键。</div>
+                <div class="card-qr">
+                    <img src="https://cdn.jsdelivr.net/gh/cdLab996/picture-lib/wudi/qrcode/bitly-wudi.png" width="80" height="80" alt="QR Code">
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. 朋克风格 -->
+        <div class="style-card punk">
+            <div class="card-date">MARCH 2025</div>
+            <h2 class="card-title">技术时代生存</h2>
+            <div class="card-quote">技术救不了你一辈子！</div>
+            <ul class="card-points">
+                <li>编程只是红利</li>
+                <li>无人不可替代</li>
+                <li>技术至上是狗屁</li>
+                <li>提升自己要紧</li>
+                <li>多元化活下去</li>
+            </ul>
+            <div class="card-footer">
+                <div class="card-note">醒醒吧，打工仔！</div>
+                <div class="card-qr">
+                    <img src="https://cdn.jsdelivr.net/gh/cdLab996/picture-lib/wudi/qrcode/bitly-wudi.png" width="80" height="80" alt="QR Code">
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. 英伦摇滚风格 -->
+        <div class="style-card british-rock">
+            <div class="card-date">March 2025</div>
+            <h2 class="card-title">技术时代的生存智慧</h2>
+            <div class="card-quote">时代这趟车，你是乘客还是司机？</div>
+            <ul class="card-points">
+                <li>编程技能只是红利</li>
+                <li>无人不可替代</li>
+                <li>技术至上是陷阱</li>
+                <li>提升自己更重要</li>
+                <li>多元化是出路</li>
+            </ul>
+            <div class="card-footer">
+                <div class="card-note">技术是工具，别被绑死。</div>
+                <div class="card-qr">
+                    <img src="https://cdn.jsdelivr.net/gh/cdLab996/picture-lib/wudi/qrcode/bitly-wudi.png" width="80" height="80" alt="QR Code">
+                </div>
+            </div>
+        </div>
+
+        <!-- 11. 黑金属风格 -->
+        <div class="style-card black-metal">
+            <div class="card-date">2025-03-25</div>
+            <h2 class="card-title">技术时代生存</h2>
+            <div class="card-quote">技术资本如沙，随风而逝。</div>
+            <ul class="card-points">
+                <li>编程仅为红利</li>
+                <li>无人不可替代</li>
+                <li>技术至上是虚妄</li>
+                <li>提升自我为真</li>
+                <li>多元化是生路</li>
+            </ul>
+            <div class="card-footer">
+                <div class="card-note">技术非命，思维为魂。</div>
+                <div class="card-qr">
+                    <img src="https://cdn.jsdelivr.net/gh/cdLab996/picture-lib/wudi/qrcode/bitly-wudi.png" width="80" height="80" alt="QR Code">
+                </div>
+            </div>
+        </div>
+
+        <!-- 12. 孟菲斯风格 -->
+        <div class="style-card memphis-design">
+            <div class="card-date">March 2025</div>
+            <h2 class="card-title">技术时代生存</h2>
+            <div class="card-quote">技术救不了你一辈子！</div>
+            <ul class="card-points">
+                <li>编程只是红利</li>
+                <li>无人不可替代</li>
+                <li>技术至上是陷阱</li>
+                <li>提升自己要紧</li>
+                <li>多元化是出路</li>
+            </ul>
+            <div class="card-footer">
+                <div class="card-note">跳出框框活下去！</div>
+                <div class="card-qr">
+                    <img src="https://cdn.jsdelivr.net/gh/cdLab996/picture-lib/wudi/qrcode/bitly-wudi.png" width="80" height="80" alt="QR Code">
+                </div>
+            </div>
+        </div>
         <!-- 实际实现中应包含所有29种风格的完整HTML结构 -->
     </div>
   </main>
@@ -813,35 +1174,34 @@
   <footer class="footer">
       <div class="footer-content">
           <div class="footer-column">
-              <h3>关于我们</h3>
-              <p>数字杂志风格画廊致力于展示最前沿的设计风格，为设计师和艺术爱好者提供灵感源泉。</p>
+              <h3>About Us</h3>
+              <p>Software Engineer 🖥️ <br/> working w/ JS, TS, Node.js, React, Vue</p>
               <div class="social-icons">
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                  <a href="#"><i class="fab fa-pinterest"></i></a>
-                  <a href="#"><i class="fab fa-behance"></i></a>
-                  <a href="#"><i class="fab fa-dribbble"></i></a>
+                  <!-- <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-pinterest"></i></a> -->
+                  <a href="https://github.com/WuChenDi" target='_blank'><i class="fab fa-github"></i></a>
+                  <a href="https://t.me/wuchendi" target='_blank'><i class="fab fa-telegram"></i></a>
               </div>
           </div>
           
           <div class="footer-column">
-              <h3>快速链接</h3>
-              <a href="#">首页</a>
-              <a href="#">所有风格</a>
-              <a href="#">最新设计</a>
-              <a href="#">设计资源</a>
-              <a href="#">联系我们</a>
+              <h3>Quick Links</h3>
+              <a href="https://notes-wudi.pages.dev/" target='_blank'>Notes</a>
+              <a href="https://bit.ly/m/wuchendi" target='_blank'>Bitly</a>
+              <a href="https://linktr.ee/wuchendi" target='_blank'>Linktree</a>
           </div>
           
           <div class="footer-column">
-              <h3>联系方式</h3>
-              <p><i class="fas fa-map-marker-alt"></i> 上海市静安区南京西路1266号</p>
-              <p><i class="fas fa-phone"></i> +86 21 1234 5678</p>
-              <p><i class="fas fa-envelope"></i> info@stylegallery.com</p>
+              <h3>Contact</h3>
+              <p><i class="fas fa-map-marker-alt"></i> China</p>
+              <p><i class="fas fa-phone"></i> +86 xxx xxxx xxxx</p>
+              <p><i class="fas fa-envelope"></i> wuchendi96@gmail.com</p>
           </div>
       </div>
       
       <div class="copyright">
-          &copy; 2025 数字杂志风格画廊. 保留所有权利. | 设计灵感来自Art Deco运动
+          &copy; Copyright (c) 2025-PRESENT |
+          <a href="https://github.com/WuChenDi" target='_blank'> wudi </a>
       </div>
   </footer>
 </body>
